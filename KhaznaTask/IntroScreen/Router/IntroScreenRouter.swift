@@ -23,6 +23,13 @@ class IntroScreenRouter: IntroScreenRouterProtocol {
     }
 
     func navigateToPostsListScreen() {
-        //TODO
+        let postsListVC = PostsListRouter.createModule()
+
+        // Ensure the navigation controller exists and navigate
+        if let navigationController = viewController?.navigationController {
+            navigationController.pushViewController(postsListVC, animated: true)
+        } else {
+            debugPrint("NavigationController is nil")
+        }
     }
 }
