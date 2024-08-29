@@ -1,13 +1,13 @@
 import UIKit
 
 func missingNumber(_ arr: [Int]) -> Int {
-    let N = arr.count
+    let arrCount = arr.count
     var nums = arr
     
     // Step 1: Rearrange the numbers to their correct positions
-    for i in 0..<N {
+    for i in 0..<arrCount {
         
-        while nums[i] > 0 && nums[i] <= N && nums[nums[i] - 1] != nums[i] {
+        while nums[i] > 0 && nums[i] <= arrCount && nums[nums[i] - 1] != nums[i] {
             let temp = nums[i]
             nums[i] = nums[temp - 1]
             nums[temp - 1] = temp
@@ -15,14 +15,14 @@ func missingNumber(_ arr: [Int]) -> Int {
     }
     
     // Step 2: Find the smallest missing positive number
-    for i in 0..<N {
+    for i in 0..<arrCount {
         if nums[i] != i + 1 {
             return i + 1
         }
     }
     
-    // Step 3: If all numbers from 1 to N are present, return N+1
-    return N + 1
+    // Step 3: If all numbers from 1 to arrCount are present, return arrCount+1
+    return arrCount + 1
 }
 
 // Example usage:
