@@ -15,6 +15,12 @@
 		A90D25ED2C80A2690029D159 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D25EC2C80A2690029D159 /* APIService.swift */; };
 		A90D25F12C80A2820029D159 /* PostsAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D25EF2C80A2820029D159 /* PostsAPIService.swift */; };
 		A90D25F22C80A2820029D159 /* PostsAPIServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D25F02C80A2820029D159 /* PostsAPIServiceProtocol.swift */; };
+		A90D261B2C80BE790029D159 /* IntroScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D261A2C80BE790029D159 /* IntroScreenViewController.swift */; };
+		A90D261E2C80BE830029D159 /* IntroScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D261C2C80BE820029D159 /* IntroScreenPresenter.swift */; };
+		A90D261F2C80BE830029D159 /* IntroScreenPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D261D2C80BE830029D159 /* IntroScreenPresenterProtocol.swift */; };
+		A90D26222C80BE8B0029D159 /* IntroScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D26202C80BE8B0029D159 /* IntroScreenRouter.swift */; };
+		A90D26232C80BE8B0029D159 /* IntroScreenRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D26212C80BE8B0029D159 /* IntroScreenRouterProtocol.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,11 @@
 		A90D25EC2C80A2690029D159 /* APIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		A90D25EF2C80A2820029D159 /* PostsAPIService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsAPIService.swift; sourceTree = "<group>"; };
 		A90D25F02C80A2820029D159 /* PostsAPIServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsAPIServiceProtocol.swift; sourceTree = "<group>"; };
+		A90D261A2C80BE790029D159 /* IntroScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenViewController.swift; sourceTree = "<group>"; };
+		A90D261C2C80BE820029D159 /* IntroScreenPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenPresenter.swift; sourceTree = "<group>"; };
+		A90D261D2C80BE830029D159 /* IntroScreenPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenPresenterProtocol.swift; sourceTree = "<group>"; };
+		A90D26202C80BE8B0029D159 /* IntroScreenRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenRouter.swift; sourceTree = "<group>"; };
+		A90D26212C80BE8B0029D159 /* IntroScreenRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroScreenRouterProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +75,7 @@
 				A90D25D92C80A2240029D159 /* SceneDelegate.swift */,
 				A90D25EB2C80A25A0029D159 /* Service */,
 				A90D25EE2C80A2740029D159 /* Repo */,
+				A90D26162C80BE200029D159 /* IntroScreen */,
 				A90D25F32C80A2900029D159 /* Storyboards */,
 				A90D25E02C80A2260029D159 /* Assets.xcassets */,
 				A90D25E52C80A2260029D159 /* Info.plist */,
@@ -95,6 +107,42 @@
 				A90D25E22C80A2260029D159 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A90D26162C80BE200029D159 /* IntroScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A90D26172C80BE360029D159 /* View */,
+				A90D26182C80BE410029D159 /* Presenter */,
+				A90D26192C80BE520029D159 /* Router */,
+			);
+			path = IntroScreen;
+			sourceTree = "<group>";
+		};
+		A90D26172C80BE360029D159 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A90D261A2C80BE790029D159 /* IntroScreenViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A90D26182C80BE410029D159 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A90D261C2C80BE820029D159 /* IntroScreenPresenter.swift */,
+				A90D261D2C80BE830029D159 /* IntroScreenPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A90D26192C80BE520029D159 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A90D26202C80BE8B0029D159 /* IntroScreenRouter.swift */,
+				A90D26212C80BE8B0029D159 /* IntroScreenRouterProtocol.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,11 +216,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A90D26222C80BE8B0029D159 /* IntroScreenRouter.swift in Sources */,
 				A90D25D82C80A2240029D159 /* AppDelegate.swift in Sources */,
 				A90D25F22C80A2820029D159 /* PostsAPIServiceProtocol.swift in Sources */,
 				A90D25ED2C80A2690029D159 /* APIService.swift in Sources */,
 				A90D25F12C80A2820029D159 /* PostsAPIService.swift in Sources */,
+				A90D261E2C80BE830029D159 /* IntroScreenPresenter.swift in Sources */,
 				A90D25DA2C80A2240029D159 /* SceneDelegate.swift in Sources */,
+				A90D26232C80BE8B0029D159 /* IntroScreenRouterProtocol.swift in Sources */,
+				A90D261B2C80BE790029D159 /* IntroScreenViewController.swift in Sources */,
+				A90D261F2C80BE830029D159 /* IntroScreenPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
