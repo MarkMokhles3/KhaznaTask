@@ -30,6 +30,13 @@
 		A90D263A2C80C7C40029D159 /* PostsListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D26382C80C7C30029D159 /* PostsListRouter.swift */; };
 		A90D263B2C80C7C40029D159 /* PostsListRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D26392C80C7C40029D159 /* PostsListRouterProtocol.swift */; };
 		A90D263E2C80C8380029D159 /* CashManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D263D2C80C8370029D159 /* CashManager.swift */; };
+		A90D26462C80CCF30029D159 /* PostDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D26442C80CCF30029D159 /* PostDetailsViewController.swift */; };
+		A90D26472C80CCF30029D159 /* PostDetailsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D26452C80CCF30029D159 /* PostDetailsViewProtocol.swift */; };
+		A90D264A2C80CCFE0029D159 /* PostDetailsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D26482C80CCFE0029D159 /* PostDetailsPresenterProtocol.swift */; };
+		A90D264B2C80CCFE0029D159 /* PostDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D26492C80CCFE0029D159 /* PostDetailsPresenter.swift */; };
+		A90D264E2C80CD070029D159 /* PostDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D264C2C80CD070029D159 /* PostDetailsRouter.swift */; };
+		A90D264F2C80CD070029D159 /* PostDetailsRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D264D2C80CD070029D159 /* PostDetailsRouterProtocol.swift */; };
+		A90D26522C80CE860029D159 /* PostDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A90D26512C80CE860029D159 /* PostDetailsInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +65,13 @@
 		A90D26382C80C7C30029D159 /* PostsListRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsListRouter.swift; sourceTree = "<group>"; };
 		A90D26392C80C7C40029D159 /* PostsListRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsListRouterProtocol.swift; sourceTree = "<group>"; };
 		A90D263D2C80C8370029D159 /* CashManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CashManager.swift; sourceTree = "<group>"; };
+		A90D26442C80CCF30029D159 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
+		A90D26452C80CCF30029D159 /* PostDetailsViewProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsViewProtocol.swift; sourceTree = "<group>"; };
+		A90D26482C80CCFE0029D159 /* PostDetailsPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsPresenterProtocol.swift; sourceTree = "<group>"; };
+		A90D26492C80CCFE0029D159 /* PostDetailsPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsPresenter.swift; sourceTree = "<group>"; };
+		A90D264C2C80CD070029D159 /* PostDetailsRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsRouter.swift; sourceTree = "<group>"; };
+		A90D264D2C80CD070029D159 /* PostDetailsRouterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsRouterProtocol.swift; sourceTree = "<group>"; };
+		A90D26512C80CE860029D159 /* PostDetailsInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostDetailsInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +111,7 @@
 				A90D263C2C80C8280029D159 /* CashManager */,
 				A90D26162C80BE200029D159 /* IntroScreen */,
 				A90D26242C80C76D0029D159 /* PostsListScreen */,
+				A90D263F2C80CCAA0029D159 /* PostDetailsScreen */,
 				A90D25F32C80A2900029D159 /* Storyboards */,
 				A90D25E02C80A2260029D159 /* Assets.xcassets */,
 				A90D25E52C80A2260029D159 /* Info.plist */,
@@ -230,6 +245,52 @@
 			path = CashManager;
 			sourceTree = "<group>";
 		};
+		A90D263F2C80CCAA0029D159 /* PostDetailsScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A90D26432C80CCE80029D159 /* View */,
+				A90D26502C80CE760029D159 /* Interactor */,
+				A90D26412C80CCD00029D159 /* Presenter */,
+				A90D26402C80CCC60029D159 /* Router */,
+			);
+			path = PostDetailsScreen;
+			sourceTree = "<group>";
+		};
+		A90D26402C80CCC60029D159 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				A90D264C2C80CD070029D159 /* PostDetailsRouter.swift */,
+				A90D264D2C80CD070029D159 /* PostDetailsRouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		A90D26412C80CCD00029D159 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A90D26492C80CCFE0029D159 /* PostDetailsPresenter.swift */,
+				A90D26482C80CCFE0029D159 /* PostDetailsPresenterProtocol.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A90D26432C80CCE80029D159 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A90D26442C80CCF30029D159 /* PostDetailsViewController.swift */,
+				A90D26452C80CCF30029D159 /* PostDetailsViewProtocol.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A90D26502C80CE760029D159 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				A90D26512C80CE860029D159 /* PostDetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -302,25 +363,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				A90D26312C80C7AC0029D159 /* PostsListInteractor.swift in Sources */,
+				A90D264E2C80CD070029D159 /* PostDetailsRouter.swift in Sources */,
 				A90D26222C80BE8B0029D159 /* IntroScreenRouter.swift in Sources */,
 				A90D25D82C80A2240029D159 /* AppDelegate.swift in Sources */,
+				A90D26472C80CCF30029D159 /* PostDetailsViewProtocol.swift in Sources */,
 				A90D25F22C80A2820029D159 /* PostsAPIServiceProtocol.swift in Sources */,
 				A90D26372C80C7BC0029D159 /* Post.swift in Sources */,
 				A90D26352C80C7B40029D159 /* PostsListPresenterProtocol.swift in Sources */,
 				A90D263E2C80C8380029D159 /* CashManager.swift in Sources */,
 				A90D263A2C80C7C40029D159 /* PostsListRouter.swift in Sources */,
+				A90D264B2C80CCFE0029D159 /* PostDetailsPresenter.swift in Sources */,
 				A90D25ED2C80A2690029D159 /* APIService.swift in Sources */,
+				A90D26462C80CCF30029D159 /* PostDetailsViewController.swift in Sources */,
 				A90D25F12C80A2820029D159 /* PostsAPIService.swift in Sources */,
 				A90D261E2C80BE830029D159 /* IntroScreenPresenter.swift in Sources */,
 				A90D25DA2C80A2240029D159 /* SceneDelegate.swift in Sources */,
 				A90D26302C80C7AC0029D159 /* PostsListInteractorProtocol.swift in Sources */,
 				A90D26232C80BE8B0029D159 /* IntroScreenRouterProtocol.swift in Sources */,
+				A90D26522C80CE860029D159 /* PostDetailsInteractor.swift in Sources */,
 				A90D262C2C80C7A40029D159 /* PostsListViewController.swift in Sources */,
 				A90D263B2C80C7C40029D159 /* PostsListRouterProtocol.swift in Sources */,
 				A90D26342C80C7B40029D159 /* PostsListPresenter.swift in Sources */,
 				A90D261B2C80BE790029D159 /* IntroScreenViewController.swift in Sources */,
 				A90D261F2C80BE830029D159 /* IntroScreenPresenterProtocol.swift in Sources */,
+				A90D264F2C80CD070029D159 /* PostDetailsRouterProtocol.swift in Sources */,
 				A90D262D2C80C7A40029D159 /* PostTableViewCell.swift in Sources */,
+				A90D264A2C80CCFE0029D159 /* PostDetailsPresenterProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

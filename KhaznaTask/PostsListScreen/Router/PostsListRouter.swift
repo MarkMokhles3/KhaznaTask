@@ -28,7 +28,13 @@ class PostsListRouter: PostsListRouterProtocol {
         return view
     }
     func navigateToPostDetails(with post: Post) {
+        let postDetailsVC = PostDetailsRouter.createModule(with: post)
         
+        if let navigationController = viewController?.navigationController {
+            navigationController.pushViewController(postDetailsVC, animated: true)
+        } else {
+            print("NavigationController is nil, cannot push view controller.")
+        }
     }
 }
 
